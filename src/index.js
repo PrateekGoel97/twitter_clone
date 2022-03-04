@@ -8,7 +8,7 @@ import {configureStore} from './store/index';
 
 let store= configureStore();
 
-
+console.log(store.getState())
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
+import { login } from '../actions/auth';
 
 class Login extends React.Component{
 
@@ -10,37 +11,62 @@ class Login extends React.Component{
         this.state = {
             email:'',
             password:'',
-            error:'',
-            disable:true
+            emailError:null,
+            passError:null
         }
     }
 
     handleEmail = (e) =>{
-
-        const {email} = this.state;
         this.setState({email:e.target.value});
 
+        var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if(!reg.test(e.target.value)){
+            this.setState({
+                emailError:'Email is not valid.'
+            })
+        }
+        else{
+            this.setState({
+                emailError:null
+            })
+        }
        
     }
 
     handlePassword = (e) =>{
-
-        const {password} = this.state;
         this.setState({password:e.target.value});
 
+        var reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-        
+        if(!reg.test(e.target.value)){
+            this.setState({
+                passError:'Password is not valid'
+            })
+        }
+        else{
+            this.setState({
+                passError:null
+            })
+        }
     }
 
     handleSubmit = (e) =>{
 
+        e.preventDefault();
+
         const {email,password} = this.state;
-        console.log(email+password)
+        console.log(email+password);
+
+        this.props.dispatch(login());
     }
 
     render(){
 
-        const {email,password,disable} = this.state;
+        const {email,password,emailError,passError} = this.state;
+        const {isLogedIn} = this.props.auth;
+
+        
 
         return (
             <div className='Login'>
@@ -69,6 +95,11 @@ class Login extends React.Component{
 
                         </div>
 
+                        <div className='error-login'>
+                            <small>{emailError}</small>
+                        </div>
+
+
                         <div className='field'>
                             <input type="password" 
                             placeholder='Password'  
@@ -79,8 +110,12 @@ class Login extends React.Component{
 
                         </div>
 
+                        <div className='error-login'>
+                            <small>{passError}</small>
+                        </div>
+
                         <div className='field'>
-                        <button type="submit"  onClick={this.handleSubmit} >Login</button>
+                        <button type="submit"  onClick={this.handleSubmit} disabled={(emailError === null && passError === null)?false:true }>Login</button>
                         </div>
 
 
@@ -93,4 +128,13 @@ class Login extends React.Component{
 }
 
 
-export default Login;
+function mapStateToProps(state){
+
+    return {
+        auth:state.auth
+    }
+}
+
+const LoginComponent = connect(mapStateToProps)(Login);
+
+export default LoginComponent;
