@@ -4,19 +4,27 @@ import Home from './Home';
 
 import {connect} from 'react-redux';
 import {BrowserRouter as Router,  Route , Routes , Navigate} from 'react-router-dom';
+import { fetchPosts } from '../actions/posts';
 
 class App extends React.Component{
+
+
 
   render(){
 
     const {isLogedIn} = this.props.auth;
 
+
     return(
       <Router>
+        <div className='App'>
+
+       
         <Routes>
           <Route path='/' element={<Home  isLogedIn={isLogedIn}/>} />
     
         </Routes>
+        </div>
       </Router>
     );
   }

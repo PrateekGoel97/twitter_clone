@@ -1,6 +1,8 @@
 import React from 'react';
-import Login from './Login';
+import Left from './Left';
+import Right from './Right';
 
+import Centre from './Centre';
 
 class Home extends React.Component{
 
@@ -9,13 +11,15 @@ class Home extends React.Component{
 
        console.log(this.props)
 
-            if(!this.props.isLogedIn){
-                return <Login />
-            }
+            // if(!this.props.isLogedIn){
+            //     return <Login />
+            // }
    
         return (
-            <div>
-                This is Home
+            <div className='home'>
+                <Left />
+                <Centre />
+                <Right />
             </div>
         )
     }

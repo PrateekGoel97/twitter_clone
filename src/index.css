@@ -1,9 +1,19 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
 body{
     margin: 0px;
     padding: 0px;
+    
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 
+.App{
+   display: flex;
+   justify-content: center;
+}
 
 
 
@@ -83,3 +93,164 @@ form{
     color: red;
     bottom: 30px;
 }
+
+.home{
+    display: flex;
+    width: 70vw;
+   
+}
+
+.left{
+    width: 20vw;
+}
+
+.right{
+    width: 20vw;
+}
+
+.centre{
+    width: 60vw;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    outline-style: solid;
+    outline-color: grey;
+    outline-width: 1px;
+}
+
+.nav-head{
+    font-weight: bold;
+}
+
+.nav-head:hover{
+   cursor: pointer;
+}
+
+
+.post-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: solid grey 1px;
+}
+
+.posts{
+    
+    outline-style: solid;
+    outline-color: grey;
+    outline-width: 1px;
+   
+}
+
+.post-text{
+    width: 88%;
+}
+
+.post-text textarea{
+    height: 40px;
+    width: 98%;
+    padding: 5px;
+    border: none;
+    font-size: 18px;
+
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; 
+}
+
+.profile-pic img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profile-pic img:hover{
+    cursor: pointer;
+}
+
+
+.post-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-icons-left{
+    display: flex;
+    
+}
+
+.post-icons-right button{
+    
+    width: 80px;
+    padding: 10px;
+    background-color: rgb(29, 155, 240);
+    border-radius: 9999px;
+    border-style: none;
+    outline-style: none;
+    color: white;
+    font-weight: bold;
+
+    
+}
+
+.post-icons-right button:hover{
+ cursor: pointer;
+ 
+}
+
+.post-icon{
+    color: rgb(29, 155, 240);
+    margin-right: 10px;
+}
+
+.postlist{
+    padding: 15px;
+
+}
+
+.post{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.post-right{
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    margin-left: 10px;
+}
+
+.post-content-top{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.post-symbols{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    
+}
+
+.post-symbol{
+    margin-right: 120px;
+    color: grey;
+}
+
+.post-symbol:hover{
+    cursor: pointer;
+}
+
+
