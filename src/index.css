@@ -1,6 +1,7 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
+
 body{
     margin: 0px;
     padding: 0px;
@@ -101,15 +102,15 @@ form{
 }
 
 .left{
-    width: 20vw;
+    width: 15vw;
 }
 
 .right{
-    width: 20vw;
+    width: 30vw;
 }
 
 .centre{
-    width: 60vw;
+    width: 50vw;
 }
 
 
@@ -253,4 +254,146 @@ form{
     cursor: pointer;
 }
 
+.left-top-icon{
+    padding: 6px;
+}
 
+.left-top-icon i{
+    font-size: 25px;
+}
+
+.left-links{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-link{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.left-link:hover{
+    cursor: pointer;
+}
+
+.left-link-icon i{
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.left-link .profile-pic img{
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+}
+
+.left-link-name{
+    font-weight: bold;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-top{
+    display: flex;
+    justify-content: center;
+}
+
+.right-input{
+    
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.right-input input{
+    width: 250px;
+    padding: 7px;
+    background-color: #f0f0f0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; 
+}
+
+.search-icon{
+    height: 15px;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.search-icon:hover{
+    cursor: pointer;
+}
+
+.right-bottom{
+  /* border: solid red 1px; */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.right-bottom-container{
+    width: 88%;
+    /* border:solid blue 1px; */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.right-bottom-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    
+    margin-bottom: 5px;
+}
+
+.right-bottom-header-heading{
+    font-weight: bold;
+}
+
+.right-bottom-header-icon{
+    color:rgb(29, 155, 240);
+}
+
+.trend-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.trend{
+    margin-bottom: 10px;
+    padding: 6px;
+}
+
+.trend-text{
+    color: grey;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.trend-hashtag{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trend-hashtag:hover{
+    cursor: pointer;
+}
