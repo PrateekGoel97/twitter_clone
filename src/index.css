@@ -114,6 +114,8 @@ form{
 }
 
 
+/************** Navbar ***********/
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -131,6 +133,7 @@ form{
    cursor: pointer;
 }
 
+/*********** Post ***********************/
 
 .post-top{
     display: flex;
@@ -215,6 +218,10 @@ form{
     margin-right: 10px;
 }
 
+.post-icon:hover{
+    cursor: pointer;
+}
+
 .postlist{
     padding: 15px;
 
@@ -236,6 +243,13 @@ form{
 .post-content-top{
     margin-bottom: 5px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-date{
+    color:grey;
+    margin-left:10px;
 }
 
 .post-symbols{
@@ -253,6 +267,8 @@ form{
 .post-symbol:hover{
     cursor: pointer;
 }
+
+/*******************  left  *********************/
 
 .left-top-icon{
     padding: 6px;
@@ -291,6 +307,8 @@ form{
 .left-link-name{
     font-weight: bold;
 }
+
+/************************  right  *****************************/
 
 .right{
     display: flex;
@@ -343,6 +361,32 @@ form{
     cursor: pointer;
 }
 
+.search-results{
+    width: 250px;
+    position: absolute;
+    top:39px;
+    margin-left: 20px;
+    background-color: lightgrey;
+    z-index: 1;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-result{
+
+    margin-top: 10px;
+
+}
+
+.result-name{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+
 .right-bottom{
   /* border: solid red 1px; */
   display: flex;
@@ -355,6 +399,7 @@ form{
     /* border:solid blue 1px; */
     background-color: #f0f0f0;
     border-radius: 10px;
+    margin-top: 5px;
 }
 
 .right-bottom-header{
@@ -371,6 +416,10 @@ form{
 
 .right-bottom-header-icon{
     color:rgb(29, 155, 240);
+}
+
+.right-bottom-header-icon:hover{
+    cursor: pointer;
 }
 
 .trend-list{
@@ -395,5 +444,86 @@ form{
 }
 
 .trend-hashtag:hover{
+    cursor: pointer;
+}
+
+
+/*********************** profile *************************/
+
+.profile{
+    display: flex;
+    width: 70%;;
+}
+
+.userProfile{
+   
+   width: 50vw;
+   outline-style: solid;
+   outline-color: grey;
+   outline-width: 1px;
+   position: relative;
+   height: 100vh;
+}
+
+.profile-header img{
+    
+    height: 200px;
+    width: 100%;
+    
+    margin-top: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.profile-title{
+    padding: 5px;
+   margin-left: 10px;
+}
+
+.profile-title-name{
+    font-weight: bold;
+}
+
+.profile-title-tweets{
+    color: grey;
+    margin-top: 2px;
+}
+
+.profile-header-pic img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    z-index: 1;
+    border: solid white 5px;
+}
+
+.profile-content{
+    margin-top: 60px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.grey{
+    color: grey;
+}
+
+.profile-location{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-gender{
+    margin-left: 20px;
+}
+
+
+.delete-btn:hover{
     cursor: pointer;
 }

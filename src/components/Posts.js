@@ -2,6 +2,8 @@ import React from "react";
 import { addpost, fetchPosts } from "../actions/posts";
 import PostList from './PostList';
 import {connect} from 'react-redux';
+import { Link } from "react-router-dom";
+
 
 class Posts extends React.Component{
 
@@ -31,7 +33,7 @@ class Posts extends React.Component{
 
         const postobj = {};
 
-        postobj.id = '11';
+        postobj.id = Date.now().toString(36) + Math.random().toString(36).substr(2);
         postobj.tweet = input;
         postobj.userName = 'Jolie Ferne';
         postobj.date = new Date();
@@ -43,7 +45,7 @@ class Posts extends React.Component{
     render(){
 
 
-        const {posts} = this.props;
+        const {posts} =  this.props;
 
         return (
         <div className="posts">
@@ -51,7 +53,9 @@ class Posts extends React.Component{
             <div className="post-top">
 
                 <div className="profile-pic">
+                <Link to="/profile" className="link">
                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="profile-pic" />
+                </Link>
                 </div>
 
                 <div className="post-text">
@@ -66,7 +70,11 @@ class Posts extends React.Component{
                         <div className="post-icons-left">
 
                                 <div>
-                                <i class="fi fi-rs-calendar post-icon"></i>
+                                <i class="fi fi-rr-picture post-icon"></i>
+                                </div>
+
+                                <div>
+                                <i class="fi fi-rr-stats post-icon"></i>
                                 </div>
 
                                 <div>
@@ -74,11 +82,7 @@ class Posts extends React.Component{
                                 </div>
 
                                 <div>
-                                <i class="fi fi-rs-calendar post-icon"></i>
-                                </div>
-
-                                <div>
-                                <i class="fi fi-rs-calendar post-icon"></i>
+                                <i class="fi fi-rs-marker post-icon"></i>
                                 </div>
                         </div>
 
@@ -95,7 +99,7 @@ class Posts extends React.Component{
 
                 {
                     posts.map((post) =>{
-                        return <PostList post={post} />
+                        return <PostList post={post} dispatch={this.props.dispatch}/>
                     })
                 }
                 

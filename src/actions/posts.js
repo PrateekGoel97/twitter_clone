@@ -1,4 +1,4 @@
-import { ADD_POST, UPDATE_POSTS } from "./actiontypes";
+import { ADD_POST, DELETE_POST, UPDATE_POSTS } from "./actiontypes";
 
 
 export function fetchPosts(){
@@ -30,4 +30,11 @@ export function addpost(post){
         post
     }
 
+}
+
+export function deletePost(id){
+    return {
+        type:DELETE_POST,
+        id
+    }
 }

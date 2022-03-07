@@ -17,7 +17,17 @@ class Login extends React.Component{
     }
 
     handleEmail = (e) =>{
+
+        
+
         this.setState({email:e.target.value});
+
+        if(e.target.value === ''){
+            this.setState({
+                emailError:null
+            })
+            return;
+        }
 
         var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -35,7 +45,16 @@ class Login extends React.Component{
     }
 
     handlePassword = (e) =>{
+
+
         this.setState({password:e.target.value});
+
+        if(e.target.value === ''){
+            this.setState({
+                passError:null
+            })
+            return;
+        }
 
         var reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
